@@ -56,3 +56,4 @@ Usage: ```> quit```
 
 ### 1.2 - Example usage
 
+![](example_usage.gif)
