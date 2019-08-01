@@ -1,46 +1,57 @@
 # glucoplot-libre
-Glucose report generator for FreeStyle Libre device.
+Linux-based PDF report generator for FreeStyle Libre GCM device.
 
-This project provides a linux-compatible command line interface capable of generating PDF reports with glucose data dumped from the FreeStyle Libre CGM system.
+This project provides a linux-compatible command line interface program developed with Python libraries (requirements.txt) and capable of generating PDF reports with glucose data dumped from the FreeStyle Libre CGM system.
 
-## 1 - For non-developers
+## 1 - How to use:
 
-1 - Download the '/app' folder;
-
-2 - Open a terminal window;
-
-3 - Change permissions for the executable file;
-
-4 - Run it!
+1 - After cloning the repository, create and enable a virtual enviroment with 'venv' in a separate folder:
 ```
-$ cd app
+$ mkdir dev_folder
+$ python3 -m venv /dev_folder
+$ cd dev_folder
+$ source bin/activate
+```
+2 - Copy '/src' folder and its contents from the repository to the '/dev_folder'.
+
+3 - Install all libraries provided by the 'requirements.txt' file with:
+```
+$ pip install -r requirements.txt
+```
+4 - Make sure you have 'pyinstaller' installed globally. To build the program, run pyinstaller as:
+```
+$ pyinstaller -F glucoplot-libre.py
+```
+5 - After building the program, copy 'patient_data.txt' to '/dist' folder. Change the executable permissions and run it:
+```
+$ cd dist
 $ sudo chmod 666 glucoplot-libre
 $ ./glucoplot-libre
 ```
 
-### 1.1 - Commands
+### 2 - Commands:
 
 After starting the program, following commands are available:
 
-1.1.1 - **check** 
+**check** 
 
 Check existing months with associated year in the glucose.csv file.
 
 Usage: ```> check```
 
-1.1.2 - **get**
+**get**
 
 Check if reader is connected. If positive, send request to dump data on .csv file.
 
 Usage: ```> get```
 
-1.1.3 - **help**
+**help**
 
 Provides general and specific command documentation.
 
 Usage: ```> help``` or ```> help <command>``` 
 
-1.1.4 - **process**
+**process**
 
 Parse, plot and print daily glucose curves in a PDF file for desired month.
 
@@ -48,16 +59,16 @@ Usage: ```> process <month_index>```
 
 <month_index> = integer representing a valid month found in the glucose table.
 
-1.1.5 - **quit**
+**quit**
 
 Quits the program.
 
 Usage: ```> quit```
 
-### 1.2 - Example usage
+### 3 - Example usage:
 
 ![](example_usage.gif)
 
-### 1.3 - Example output
+### 4 - Example output:
 
 ![](example_output.gif)
