@@ -33,25 +33,25 @@ $ ./glucoplot-libre
 
 After starting the program, following commands are available:
 
-**check** 
+- **check** 
 
 Check existing months with associated year in the glucose.csv file.
 
 Usage: ```> check```
 
-**get**
+- **get**
 
 Check if reader is connected. If positive, send request to dump data on .csv file.
 
 Usage: ```> get```
 
-**help**
+- **help**
 
 Provides general and specific command documentation.
 
 Usage: ```> help``` or ```> help <command>``` 
 
-**process**
+- **process**
 
 Parse, plot and print daily glucose curves in a PDF file for desired month.
 
@@ -59,7 +59,7 @@ Usage: ```> process <month_index>```
 
 <month_index> = integer representing a valid month found in the glucose table.
 
-**quit**
+- **quit**
 
 Quits the program.
 
