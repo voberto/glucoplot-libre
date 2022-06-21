@@ -7,7 +7,7 @@ hidapi==0.7.99.post21
 kiwisolver==1.0.1
 macholib==1.10
 matplotlib==2.2.2
-numpy==1.13.3
+numpy==1.22.0
 pandas==0.23.3
 pefile==2017.11.5
 Pillow>=6.2.2
