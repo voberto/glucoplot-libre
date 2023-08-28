@@ -18,5 +18,5 @@ pyserial==3.4
 python-dateutil==2.7.3
 pytz==2018.5
 pyusb==1.0.2
-reportlab==3.5.2
+reportlab==3.6.13
 six==1.11.0
